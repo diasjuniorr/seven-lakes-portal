@@ -8,6 +8,7 @@ export interface District {
   character: string;
   primaryRole: string;
   imageUrl?: string;
+  comparisons?: ImageComparison[];
   sections: {
     overview: string;
     history: string;
@@ -32,6 +33,19 @@ export interface GalleryItem {
   imageUrl: string;
   description?: string;
   district?: string;
+}
+
+export interface ImageComparison {
+  id: string;
+  beforeImage: string;
+  afterImage: string;
+  beforeLabel: string;
+  afterLabel: string;
+  beforeDate?: string;
+  afterDate?: string;
+  caption?: string;
+  districtSlug?: string;
+  projectSlug?: string;
 }
 
 export type ProjectStatusType = 'proposed' | 'planning' | 'approved' | 'in-progress' | 'completed' | 'suspended';
