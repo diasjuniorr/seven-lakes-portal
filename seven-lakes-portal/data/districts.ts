@@ -3,26 +3,36 @@ import { District } from '@/types';
 export const districts: District[] = [
   {
     id: '1',
-    slug: 'central-district',
-    name: '[District name]',
-    description: '[Summary]',
+    slug: 'kaksilahti',
+    name: 'Kaksilahti',
+    description: 'Twin Bay · Former working name: First Villages District',
     population: '[Statistic]',
     area: '[Statistic]',
     density: '[Statistic]',
-    established: '[Date]',
+    established: 'Pre-medieval occupation; recognizable settlements consolidated during the medieval period',
     administrativeUnit: '[Department]',
     imageUrl: '',
     sections: {
-      overview: '[Summary]',
-      geography: '[Summary]',
-      history: '[Summary]',
-      economy: '[Summary]',
-      infrastructure: '[Summary]',
-      transportation: '[Summary]',
-      environment: '[Summary]',
-      demographics: '[Summary]',
-      landUse: '[Summary]',
-      notablePlaces: '[Summary]',
+      overview:
+        'Kaksilahti is one of the oldest continuously inhabited parts of the Seven Lakes region. Human activity predates the recognizable settlements, but over time two permanent communities emerged: a fishing settlement in the northeast and a forestry and woodworking settlement in the southwest. The two communities traded extensively and eventually developed into a single modern district. Today Kaksilahti is a small, developed, predominantly working-class district with strong infrastructure and public services for its size. The former woodworking settlement serves as its downtown and commercial center, while the former fishing settlement functions primarily as a residential suburb.',
+      geography:
+        'The district developed around two complementary resource landscapes. The lakes supported reliable fishing in the northeast, while the nearby Dark Forest supplied abundant timber, including wood noted for its unusual durability. This geography allowed the fishing and woodworking communities to develop beside one another while maintaining distinct local identities. The fishing suburb remains strongest in character around the lakeside community and the historic fishing grounds.',
+      history:
+        'Human occupation in Kaksilahti is pre-medieval, although historians cannot identify a foundation date. The recognizable fishing and woodworking settlements probably consolidated during the medieval period. Their inhabitants were peripheral rather than completely isolated: other Finnish communities knew of them and trade occurred, but the geography of Seven Lakes limited sustained contact with the rest of the country. Life revolved around work, local resources and exchange rather than sophisticated urban institutions. Gradual integration with wider Finland was followed much later by industrial forestry, internal migration, modern roads, the regional highway, passenger rail and eventually the explosive growth of Manhattan. The southwestern settlement urbanized into the district\'s commercial center, while the fishing settlement evolved primarily into its residential suburb.',
+      economy:
+        'The original economy was based on fishing, timber extraction, woodworking and trade between the two settlements. The fishing community exploited the lakes, while the southwestern community increasingly specialized in forest products. Industrial forestry later expanded employment and commerce and attracted migration from elsewhere in Finland. The modern district retains a working-class identity even as its economy and infrastructure have become fully integrated with the wider metropolitan region.',
+      infrastructure:
+        'Kaksilahti has unusually strong infrastructure for a district of its size. Its modernization included new roads, connection to the regional highway and passenger rail, alongside the broader infrastructure expansion associated with the growth of the Seven Lakes metropolitan region. Despite this development, the district still feels like a small regional town rather than an extension of metropolitan Manhattan.',
+      transportation:
+        'The district was historically connected through local trade routes before being progressively integrated into wider regional transport networks. Modern roads, the regional highway and passenger rail transformed its relationship with the rest of Seven Lakes and Finland, while preserving the slower local character of its residential areas.',
+      environment:
+        'The lakes and the Sacred Dark Forest are central to Kaksilahti\'s environmental and cultural history. The forest has never been understood solely as untouched wilderness; its importance has always been tied to managed use and resource extraction, supported by strict norms and later protections governing exploitation. Modern fishing facilities occupy essentially the same fishing grounds used by the old community for centuries, creating one of the district\'s strongest forms of physical continuity with its past.',
+      demographics:
+        'Descendants of Seven Lakes\' earliest known population remain particularly concentrated in the former fishing settlement. The old woodworking settlement became substantially more mixed as forestry employment, commerce and migration from elsewhere in Finland expanded. Historical identity therefore becomes progressively more noticeable toward the fishing suburb and is strongest around the self-sufficient lakeside community.',
+      landUse:
+        'The former woodworking settlement now forms the district\'s downtown and commercial center. The former fishing settlement is predominantly residential and is itself divided between conventional lower-cost housing farther inland and a modern self-sufficient residential area beside the lake and historic fishing grounds. The district as a whole remains compact and developed rather than visibly historic in its built form.',
+      notablePlaces:
+        'The district\'s strongest surviving heritage is geographic rather than architectural. Modern fishing facilities remain on the historic fishing grounds used for centuries, while the Sacred Dark Forest continues to hold cultural importance through its long relationship with forestry, resource management and local identity. Almost no visibly ancient architecture survives.',
     },
   },
   {
