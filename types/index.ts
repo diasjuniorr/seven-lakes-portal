@@ -3,24 +3,35 @@ export interface District {
   slug: string;
   name: string;
   description: string;
-  population: string;
-  area: string;
-  density: string;
+  population?: string;
   established: string;
-  administrativeUnit: string;
-  imageUrl: string;
+  character: string;
+  primaryRole: string;
+  imageUrl?: string;
   sections: {
     overview: string;
-    geography: string;
     history: string;
+    geographyEnvironment: string;
     economy: string;
-    infrastructure: string;
-    transportation: string;
-    environment: string;
-    demographics: string;
-    landUse: string;
+    infrastructureMobility: string;
+    characterDevelopment: string;
     notablePlaces: string;
   };
+}
+
+export interface LoreMilestone {
+  id: string;
+  period: string;
+  title: string;
+  description: string;
+}
+
+export interface GalleryItem {
+  id: string;
+  title: string;
+  imageUrl: string;
+  description?: string;
+  district?: string;
 }
 
 export type ProjectStatusType = 'proposed' | 'planning' | 'approved' | 'in-progress' | 'completed' | 'suspended';
@@ -31,20 +42,13 @@ export interface Project {
   title: string;
   status: ProjectStatusType;
   summary: string;
-  department: string;
-  responsibleAuthority: string;
-  startDate: string;
-  endDate: string;
-  budget: string;
   districts: string[];
   category: string;
-  imageUrl: string;
+  period?: string;
+  imageUrl?: string;
   sections: {
-    objectives: string;
-    background: string;
-    scope: string;
-    milestones: string;
-    currentProgress: string;
+    overview: string;
+    currentProgress?: string;
   };
 }
 

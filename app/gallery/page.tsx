@@ -1,0 +1,10 @@
+import Image from 'next/image';
+import { Metadata } from 'next';
+import { MunicipalPageHeader } from '@/components/municipal/municipal-page-header';
+import { galleryItems } from '@/data/gallery';
+
+export const metadata: Metadata = { title: 'Gallery' };
+
+export default function GalleryPage() {
+  return <div><MunicipalPageHeader title="Gallery" subtitle="Gameplay screenshots, district views and historical comparisons from Seven Lakes." /><div className="municipal-container py-10">{galleryItems.length > 0 ? <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">{galleryItems.map((item) => <figure key={item.id} className="border border-border rounded-sm overflow-hidden bg-card"><div className="relative aspect-video bg-muted"><Image src={item.imageUrl} alt={item.title} fill className="object-cover" /></div><figcaption className="p-4"><h2 className="font-display font-semibold">{item.title}</h2>{item.description && <p className="text-sm text-muted-foreground mt-1">{item.description}</p>}</figcaption></figure>)}</div> : <p className="text-sm text-muted-foreground max-w-2xl">No confirmed gameplay images have been added to the public gallery yet.</p>}</div></div>;
+}
