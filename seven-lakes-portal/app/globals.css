@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 17% 96%;
+    --foreground: 210 29% 16%;
+
+    --card: 40 20% 98%;
+    --card-foreground: 210 29% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 29% 16%;
+
+    --primary: 213 66% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 100 55% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 10% 92%;
+    --muted-foreground: 210 10% 42%;
+
+    --accent: 40 14% 90%;
+    --accent-foreground: 210 29% 16%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 40 10% 86%;
+    --input: 40 10% 86%;
+    --ring: 213 66% 32%;
+
+    --radius: 0.375rem;
+    --radius-sm: 0.25rem;
+    --radius-lg: 0.5rem;
+    --radius-full: 9999px;
+
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.04);
+    --shadow-md: 0 2px 4px -1px rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.04);
+    --shadow-lg: 0 4px 8px -2px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.04);
+
+    --duration-fast: 150ms;
+    --duration-normal: 250ms;
+    --duration-slow: 350ms;
+
+    --chart-1: 213 66% 32%;
+    --chart-2: 100 55% 20%;
+    --chart-3: 30 60% 50%;
+    --chart-4: 195 50% 40%;
+    --chart-5: 340 45% 45%;
+
+    --status-proposed: 213 30% 50%;
+    --status-planning: 40 60% 50%;
+    --status-approved: 160 50% 40%;
+    --status-in-progress: 30 70% 50%;
+    --status-completed: 145 55% 35%;
+    --status-suspended: 0 40% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-foreground;
+  }
+}
+
+@layer components {
+  .municipal-container {
+    @apply mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8;
+  }
+  .section-divider {
+    @apply border-t border-border;
+  }
+  .page-section {
+    @apply py-10 sm:py-14;
+  }
+  .prose-municipal {
+    @apply text-foreground leading-relaxed;
+  }
+  .prose-municipal p {
+    @apply mb-4 text-[15px] leading-[1.7];
+  }
+  .prose-municipal h2 {
+    @apply mt-10 mb-4 text-xl font-semibold;
+  }
+  .prose-municipal h3 {
+    @apply mt-8 mb-3 text-lg font-semibold;
+  }
+  .prose-municipal ul {
+    @apply mb-4 ml-5 list-disc space-y-1 text-[15px];
+  }
+  .prose-municipal table {
+    @apply w-full text-sm;
+  }
+  .prose-municipal table th {
+    @apply border-b-2 border-border px-3 py-2 text-left font-semibold text-muted-foreground;
+  }
+  .prose-municipal table td {
+    @apply border-b border-border px-3 py-2;
+  }
+
+  .then-now-slider {
+    position: relative;
+    overflow: hidden;
+    cursor: ew-resize;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .then-now-slider .then-now-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: hsl(var(--primary));
+    z-index: 10;
+    cursor: ew-resize;
+  }
+  .then-now-slider .then-now-handle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: hsl(var(--primary));
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .then-now-slider .then-now-handle::before {
+    content: '◂ ▸';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 10px;
+    z-index: 11;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+}
