@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { District } from '@/types';
-import { ArrowRight, Users, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 
 export function DistrictCard({ district }: { district: District }) {
   return (
@@ -14,10 +14,7 @@ export function DistrictCard({ district }: { district: District }) {
         <div className="p-4">
           <h3 className="font-display font-semibold text-base mb-1 group-hover:text-primary transition-colors">{district?.name}</h3>
           <p className="text-[13px] text-muted-foreground mb-3 line-clamp-2">{district?.description}</p>
-          <div className="flex items-center gap-4 text-xs text-muted-foreground">
-            <span className="flex items-center gap-1"><Users className="w-3 h-3" /> {district?.population}</span>
-            <span>{district?.area}</span>
-          </div>
+          <p className="text-xs text-muted-foreground">{district.primaryRole}</p>
         </div>
       </div>
     </Link>

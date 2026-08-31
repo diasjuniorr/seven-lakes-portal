@@ -16,7 +16,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1 text-xs text-muted-foreground">
             <MapPin className="w-3 h-3" />
-            <span>{project?.department}</span>
+            <span>{project.districts.join(', ') || 'Region-wide'}</span>
           </div>
           <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
         </div>
